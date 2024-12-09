@@ -1,0 +1,190 @@
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --font-primary: 'Poppins';
+    --font-secondary: 'Open Sans';
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+}
+
+body {
+    background-color: var(--violet);
+    background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: var(--font-primary), var(--font-secondary);
+    font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-regular);
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+}
+
+.logo {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.image {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: start;
+}
+
+.text {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 2;
+    text-align: left;
+    font-size: large;
+}
+
+h2 {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 20px; 
+    font-size: 3rem;
+    line-height: 1.4;
+}
+
+button {
+    background-color: white;
+    border-radius: 35px;
+    width: 190px;
+    height: 50px;
+    color: var(--violet);
+    border: none;
+    cursor: pointer; 
+}
+
+button:hover {
+    background-color: var(--soft-magenta);
+    color: white;
+}
+
+.content {
+    padding: 80px;
+}
+
+.Logo {
+    position: absolute;
+    top: 6rem;
+    left: 10.5%;
+    z-index: 2;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    max-width: 1500px;
+    margin: auto;
+}
+
+  .social-icons {
+    position: absolute;
+    bottom: 6rem;
+    right: 10.5%;
+    z-index: 2;
+    display: flex;
+    gap: 15px;
+  }
+
+  .social-icons div {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+
+  .facebook {
+    border: solid 1px currentColor;
+    border-radius: 50px;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.twitter {
+    border: solid 1px currentColor;
+    border-radius: 50px;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.instagram {
+    border: solid 1px currentColor;
+    border-radius: 50px;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+  @media (max-width: 375px) {
+    .content-container {
+      display: flex;
+      flex-direction: column; 
+      margin: 20px auto; 
+    }
+
+    body {
+        background-image: url(/images/bg-mobile.svg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .social-icons {
+        right: auto;
+        bottom: 2rem;
+    }
+
+    button {
+        width: 70%;
+    }
+
+    p {
+        text-align: center;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 0;
+    }
+
+    img {
+        width: 90%;
+        margin-bottom: 90px;
+        margin-top: 90px;
+    }
+
+    .Logo svg {
+        width: 65%;
+    }
+
+    .content-container {
+        padding: 20px;
+    }
+}
